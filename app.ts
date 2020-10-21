@@ -5,6 +5,7 @@ import { Post } from "./posts/Post";
 import { PostResolver } from "./posts/PostResolver";
 import { ApolloServer } from "apollo-server";
 import { Container } from "typedi";
+import { StatusResolver } from "./StatusResolver";
 
 export interface Context {
     user: string;
@@ -22,7 +23,7 @@ const start = async () => {
   });
 
   const schema = await buildSchema({
-    resolvers: [PostResolver],
+    resolvers: [PostResolver, StatusResolver],
     container: Container,
   });
 

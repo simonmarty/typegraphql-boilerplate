@@ -1,9 +1,3 @@
 node_modules
 test.db
 build
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*

@@ -1,14 +1,16 @@
 import "reflect-metadata";
 import { buildSchema } from "type-graphql";
 import { useContainer, createConnection } from "typeorm";
-import { Post } from "./posts/Post";
-import { PostResolver } from "./posts/PostResolver";
-import { ApolloServer } from "apollo-server";
 import { Container } from "typedi";
-import { StatusResolver } from "./StatusResolver";
+import { ApolloServer } from "apollo-server";
+
+import { Post } from "./entities/posts/Post";
+
+import { PostResolver } from "./entities/posts/PostResolver";
+import { StatusResolver } from "./entities/status/StatusResolver";
 
 export interface Context {
-    user: string;
+  user: string;
 }
 
 useContainer(Container);

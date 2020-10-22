@@ -1,8 +1,7 @@
-import { VariablesInAllowedPositionRule } from "graphql";
 import { Arg, Ctx, Mutation, Query, Resolver } from "type-graphql";
 import { Repository } from "typeorm";
 import { InjectRepository } from "typeorm-typedi-extensions";
-import { Context } from "../app";
+import { Context } from "../../app";
 import { Post } from "./Post";
 import { PostInput } from "./PostInput";
 
